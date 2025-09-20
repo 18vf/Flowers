@@ -1657,3 +1657,59 @@ h1 {
 }
 
 /* Agregar más estilos según sea necesario */
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fondo general */
+body {
+  background: black;
+  overflow: hidden;
+  font-family: "Arial", sans-serif;
+}
+
+/* Texto principal */
+.titulo {
+  color: yellow;
+  text-align: center;
+  margin-top: 40vh;
+  font-size: 2em;
+  font-weight: bold;
+  letter-spacing: 4px;
+  text-shadow: 2px 2px 5px rgba(255,255,255,0.5);
+}
+
+/* Contenedor de corazones */
+#hearts-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 200;
+}
+
+/* Estilo de corazones */
+.heart {
+  position: absolute;
+  bottom: -20px;
+  font-size: 24px;
+  animation: floatUp 6s linear forwards;
+}
+
+/* Animación flotante */
+@keyframes floatUp {
+  from {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-100vh) scale(1.5);
+    opacity: 0;
+  }
+}
